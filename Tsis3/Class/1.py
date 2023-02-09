@@ -1,11 +1,12 @@
-class clas():
-    def getstring(self):
-        self.a = input()
+class String():
+    def GetString(self):
+        n = input()
+        return n
 
-    def printstring(self):
-        print(self.a.upper())
 
-g = clas()
+    def PrintString(self):
 
-g.getstring()
-g.printstring()
+        print(self.GetString().upper())
+
+s = String()
+s.PrintString()
