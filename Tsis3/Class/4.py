@@ -1,28 +1,35 @@
 import math
 
-
-a, b = int(input()), int(input())
-
-c, d = int(input()), int(input())
-
 class Point():
-    def __init__(self, x = 0, y = 0):
+
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
     def show(self):
-        print("Point({}, {})".format(self.x, self.y))
+        print("Point {}, {}".format(self.x, self.y))
+
     def move(self, x, y):
-        self.x += x
-        self.y += y
-
-    def distt(self, x1, y1):
-        return math.sqrt((self.x - x1) ** 2 + (self.y - y1) ** 2)
-
-cl = Point(a,b)
-
-cl.show()
+        self.x = x
+        self.y = y
+        print("New point {}, {}".format(self.x, self.y))
 
 
+    def dict(self, x,y):
+        a = math.sqrt((self.x - x)**2 + (self.y - y)**2)
+        print(a)
 
-print("Distance between the two points", cl.distt(c,d))
+x = int(input())
+x1 = int(input())
+y = int(input())
+y1 = int(input())
+
+s = Point(x, y)
+s.show()
+s.move(x1, y1)
+s.dict(x, y)
+
+
+
+
+
