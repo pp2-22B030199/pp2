@@ -1,5 +1,7 @@
-a = int(input())
-def C(a):
-    return  (5 / 9) * (a - 32)
+def faran(cels):
+    return (cels - 32) * (5 / 9)
 
-print( "C = ", C(a))
+
+cels = float(input())
+
+print(faran(cels))

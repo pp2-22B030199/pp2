@@ -1,20 +1,23 @@
-lst = map(int, input().split())
+import math
 
-def isprime(x):
-    x = int(x)
-    if x <= 1:
+li = input().split()
+
+
+def isprime(num):
+    if(num == 1):
         return False
-    for i in range(2, x):
-        if x % i == 0:
+    for i in range (2, int(math.sqrt(num)) + 1):
+        if(num % i == 0):
             return False
-
     return True
-def filter_prime(lst):
-    x = []
-    for i in lst:
-        if isprime(i):
-            x.append(i)
-    return x
 
 
-print(filter_prime(lst))
+def prime(li):
+    res = []
+    for num in li:
+        num = int(num)
+        if(isprime(num) == True):
+            res.append(num)
+    return res
+
+print(prime(li))

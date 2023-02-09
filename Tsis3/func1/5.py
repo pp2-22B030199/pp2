@@ -1,8 +1,10 @@
 from itertools import permutations
+st = input()
 
-str = input()
-def perr(string):
+
+def permutate(string):
     for i in permutations(string):
-        print(" ".join(i))
+        print(''.join(i))
 
-perr(str)
+
+permutate(st)

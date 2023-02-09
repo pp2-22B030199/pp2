@@ -1,6 +1,10 @@
-lst = map(int, input().split())
-def histogram(x):
-    for i in x:
-        print( "*" * i)
+def histogram(li):
+    for i in li:
+        i = int(i)
+        for k in range(i):
+            k = int(k)
+            print('*',end ='')
+        print()
 
-histogram(lst)
+li = input().split()
+histogram(li)

@@ -1,5 +1,6 @@
-a = int(input())
-def Oun(a):
-    return 28.3495231 * a
+def ounces(grams):
+    return 28.3495231 * grams
 
-print(Oun(a), "ounces")
+grams = float(input())
+
+print(ounces(grams))

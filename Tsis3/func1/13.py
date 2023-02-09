@@ -10,6 +10,7 @@ def guess_game():
         g = int(input())
         if g == snums:
             print("Good job, " + name + "! You guessed my number in " + str(i) + " guesses!")
+            break
         elif g < snums:
             print("Your guess is too low.")
         else:
