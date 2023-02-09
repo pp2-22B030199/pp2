@@ -1,22 +1,20 @@
-a = input()
-b = int(input())
+class Account():
 
-class Account:
-    def __init__(self, owner, balance = 0):
+    def __init__(self, owner, balance):
         self.owner = owner
         self.balance = balance
-    def deposite(self, sum):
+
+    def deposit(self, sum):
         self.balance += sum
-        print( "Balance", self.balance)
-    def withdraw(self, sum):
-        if sum > self.balance:
-            print("Withdrawal declined, insufficient funds")
+    def witgraw(self, sum):
+        if self.balance < sum:
+            print("No enough Money")
         else:
-            self.balance -= sum
-            print( "New balance", self.balance)
+            self.balance -=sum
 
-acc = Account(a,b)
+a = Account("Adi", 5000)
+a.deposit(100)
+a.witgraw(200)
+print(a.balance)
 
-acc.deposite(500)
-acc.withdraw(2000)
-acc.withdraw(300)
+
