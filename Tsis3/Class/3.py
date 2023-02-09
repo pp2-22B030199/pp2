@@ -1,20 +1,28 @@
-a = int(input())
-b = int(input())
-
 class Shape():
-    def __init__(self):
-        pass
     def area(self):
         return 0
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def area(self):
+        return self.length ** 2
+
+s = Shape()
+print(s.area())
+
+a = float(input())
+s1 = Square(a)
+
+print(s1.area())
 
 class Rectangle(Shape):
-
-    def __init__(self, lenght, width):
-        self.lenght = lenght
+    def __init__(self, length, width):
+        self.length = length
         self.width = width
+
     def area(self):
-        return self.lenght * self.width
+        return self.length * self.width
 
-rec = Rectangle(a,b)
-
-print("Area of rectangle:", rec.area())
+b = Rectangle(int(input()), int(input()))
+print(b.area())
